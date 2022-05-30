@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <Container fluid>
             <Row>
-                <Slider />
+                <Slider sliderId={1316} />
             </Row>
         </Container>
     )
