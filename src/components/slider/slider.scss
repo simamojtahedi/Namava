@@ -4,14 +4,73 @@
     position: relative;
     z-index: 0;
     padding: 0;
+    overflow: hidden;
 
     .slider-container {
         width: 100%;
         height: 100%;
-        background-image: linear-gradient(to left, rgba(18, 18, 18, 0), rgba(18, 18, 18, 0) 50%), linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw),
-        url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9IjkwMCI+PHBhdGggZmlsbD0iIzM3MzgzZSIgZD0iTTAgMGgxOTIwdjkwMEgweiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+);
+        direction: rtl;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            box-shadow: rgb(18, 18, 18) 0px -5px 5px inset;
+        }
+    }
+    .carousel-control-next {
+        background-color: #423E3F !important;
+        position: absolute !important;
+        left: 50px;
+        top: auto;
+        bottom: 120px;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        span {
+            width: 1.2rem !important;
+        }
+    }
+    .carousel-control-prev {
+        background-color: #423E3F !important;
+        position: absolute !important;
+        left: 95px;
+        top: auto;
+        bottom: 120px;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;        
+        span {
+            width: 1.2rem !important;
+        }
+    }
+    .carousel-caption {
+        position: absolute;
+        left: auto;
+        top: 10%;
+        right: 5%;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: right;
         z-index: 1;
-        box-shadow: rgb(18, 18, 18) 0px -5px 5px inset;
-        opacity: 1;
+
+        img {
+            max-width: 25vw;
+            height: 9vw;
+            object-fit: contain;
+        }
+
+        p {
+            width: 35vw;
+        }
     }
 }
