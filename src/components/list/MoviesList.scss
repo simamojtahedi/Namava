@@ -1,0 +1,64 @@
+
+
+.moviesListTitle {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    direction: rtl;
+    margin-bottom: 1.2rem;
+    margin-top: 1rem;
+    transition: all .4s;
+
+    &:hover {
+        a {
+            opacity: 1;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        opacity: 0;
+        transition: all .4s;
+    }
+
+    h6 {
+        margin: 0;
+        margin-left: 2rem;
+        font-size: 1.2rem;
+    }
+
+
+}
+
+.moviesList {
+    margin-bottom: 1rem ;
+    h6 {
+        text-align: right;
+        display: block;
+        width: 100%;
+        padding-top: .7rem;
+        font-size: .9rem;
+    }
+
+    .swiper-slide {
+        height: auto;
+        overflow: hidden;
+        position: relative;
+        text-align: right;
+
+        a {
+            text-decoration: none;
+            color: #FFFFF0;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px !important;
+        }
+    }
+
+    
+}
