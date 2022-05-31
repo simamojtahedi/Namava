@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import './MoviesList.scss'
 import { Link } from "react-router-dom";
 import {BiChevronLeft} from 'react-icons/bi'
 import axios from "axios";
 import { imageUrl } from "../../utils/functions";
+import './MoviesList.scss'
 
 const MoviesList = (props) => {
     const [items, setItems] = useState([])
@@ -37,12 +37,12 @@ const MoviesList = (props) => {
             >
                 {items.length > 0 && 
                     items.map(item => (
-                    <SwiperSlide key={item.id} >
-                        <Link to='/'>
-                            <img src={imageUrl(item.imageUrl)} />
-                            <h6>{item.caption}</h6>
-                        </Link>
-                    </SwiperSlide>
+                        <SwiperSlide key={item.id} >
+                            <Link to='/'>
+                                <img src={imageUrl(item.imageUrl)} />
+                                <h6>{item.caption}</h6>
+                            </Link>
+                        </SwiperSlide>
                     ))
                 }
             </Swiper>
