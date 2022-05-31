@@ -3,6 +3,9 @@ import React, { useEffect } from 'react'
 import { useSlider, useSliderActions } from '../../context/SliderProvider';
 import { Button, Carousel } from 'react-bootstrap';
 import { imageUrl } from '../../utils/functions';
+import {AiOutlineInfoCircle} from 'react-icons/ai'
+import {BsPlayFill} from 'react-icons/bs'
+import { Link } from 'react-router-dom';
 import './slider.scss'
 
 const Slider = ({sliderId}) => {
@@ -33,25 +36,25 @@ const Slider = ({sliderId}) => {
                     <img className='mb-4' src={imageUrl(item.logoImageUrl)} alt="First slide" />
                     <h4 className='mb-3'>{item.caption}</h4>
                     <p>{item.story}</p>
-                    <span className='mt-4'>{item.teaserText}</span>
-                    <div className='actions'>
-                        <Button> خرید اشتراک</Button>
-                        <Button> پیش نمایش</Button>
-                        <Button> توضیحات بیشتر</Button>
+                    <span className='mt-3'>{item.teaserText}</span>
+                    <div className='actions mt-3 mb-4'>
+                        <Button variant="light"><BsPlayFill />{item.isMarketable ? 'خرید بلیط' : ' خرید اشتراک'} </Button>
+                        <Link to='/'><AiOutlineInfoCircle /> توضیحات بیشتر </Link>
                     </div>
 
                     <div className='slider-cast'>
                         <span>ستارگان: </span>
                         {item.casts.map(cast => (
-                            <span key={cast.castId}>{cast.castName}</span>
+                            <Link to='/' key={cast.castId}> {cast.castName} </Link>
                         ))}
                     </div>
+                    {item.director.length > 0 && 
                     <div className='slider-cast'>
                         <span>کارگردان: </span>
                         {item.director.map(director => (
                             <span key={director.castId}>{director.castName}</span>
                         ))}
-                    </div>
+                    </div>}
                     </Carousel.Caption>
                 </Carousel.Item>
             ))}
