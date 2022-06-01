@@ -1,0 +1,43 @@
+
+.bannersList {
+    margin-bottom: 3rem;
+    h6 {
+        text-align: right;
+        display: block;
+        width: 100%;
+        padding-top: .7rem;
+        font-size: .8rem;
+        margin-bottom: .2rem;
+    }
+
+    span {
+        font-size: .77rem;
+        color: #aaa;
+    }
+
+    .swiper-slide {
+        height: auto;
+        overflow: hidden;
+        position: relative;
+        text-align: right;
+
+        a {
+            text-decoration: none;
+            color: #FFFFF0;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px !important;
+        }
+    }
+}
+
+.banner-placeholder {
+    min-height: 200px;
+    height: auto;
+    background: linear-gradient(0deg, rgba(85,85,85,0.9391106784510679) 0%, rgba(17,17,17,1) 100%);    
+    border-radius: 10px;
+}
