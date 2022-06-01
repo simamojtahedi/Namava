@@ -1,0 +1,76 @@
+
+
+.castsListTitle {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    direction: rtl;
+    margin-bottom: 1.2rem;
+    margin-top: 1rem;
+    transition: all .4s;
+
+    &:hover {
+        a {
+            opacity: 1;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        opacity: 0;
+        transition: all .4s;
+    }
+
+    h6 {
+        margin: 0;
+        margin-left: 2rem;
+        font-size: 1.2rem;
+    }
+}
+
+.castsList {
+    margin-bottom: 3rem;
+    h6 {
+        text-align: right;
+        display: block;
+        width: 100%;
+        padding-top: .7rem;
+        font-size: .8rem;
+        margin-bottom: .2rem;
+        line-height: 1.6;
+    }
+
+    span {
+        font-size: .77rem;
+        color: #aaa;
+    }
+
+    .swiper-slide {
+        height: auto;
+        overflow: hidden;
+        position: relative;
+        text-align: right;
+
+        a {
+            text-decoration: none;
+            color: #FFFFF0;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 50% !important;
+        }
+    }
+}
+
+.cast-placeholder {
+    min-height: 180px;
+    min-width: 180px;
+    height: auto;
+    background: linear-gradient(0deg, rgba(85,85,85,0.9391106784510679) 0%, rgba(17,17,17,1) 100%);    
+    border-radius: 50%;
+}
