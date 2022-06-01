@@ -1,6 +1,8 @@
 import axios from 'axios'
 import React, { useEffect } from 'react'
 import { Container, Row } from 'react-bootstrap'
+import BannerList from '../components/list/BannerList'
+import CastList from '../components/list/CastList'
 import MoviesList from '../components/list/MoviesList'
 import Slider from '../components/slider/Slider'
 import { useMenues, useMenuesActions } from '../context/MenuesProvider'
@@ -46,6 +48,12 @@ const Home = () => {
                             case "LatestEpisods":
                             case "ExclusiveDubs":
                                 section = <MoviesList key={`page-section-${item.pageItemId}`} data={item} />
+                            break;
+                            case "BannerGroup":
+                                section = <BannerList key={`page-section-${item.pageItemId}`} data={item} />
+                            break;
+                            case "StarGroup":
+                                section = <CastList key={`page-section-${item.pageItemId}`} data={item} />
                             break;
                         }
                         return section
