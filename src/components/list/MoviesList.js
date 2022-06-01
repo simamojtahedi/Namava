@@ -28,11 +28,6 @@ const MoviesList = (props) => {
             .then(res => {
                 setItems(res.data.result)
             })
-        } else if (props.data && props.data.payloadType === "CategoryGroup") {
-            axios.get(`https://www.namava.ir/api/v1.0/category-groups/${props.data.payloadKey}/latest-medias?pi=1&ps=20`)
-            .then(res => {
-                setItems(res.data.result)
-            })
         } else if (props.data && props.data.payloadType === "ExclusiveDubs") {
             axios.get(`https://www.namava.ir/api/v1.0/medias/exclusive-dubs?pi=1&ps=20`)
             .then(res => {
