@@ -31,7 +31,7 @@
 }
 
 .moviesList {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     h6 {
         text-align: right;
         display: block;
@@ -39,6 +39,7 @@
         padding-top: .7rem;
         font-size: .8rem;
         margin-bottom: .2rem;
+        line-height: 1.6;
     }
 
     span {
@@ -67,7 +68,7 @@
 }
 
 .image-placeholder {
-    min-height: 275px;
+    min-height: 265px;
     height: auto;
     background: linear-gradient(0deg, rgba(85,85,85,0.9391106784510679) 0%, rgba(17,17,17,1) 100%);    
     border-radius: 10px;
