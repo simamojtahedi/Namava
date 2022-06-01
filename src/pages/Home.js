@@ -44,9 +44,6 @@ const Home = () => {
                             case "PostGroup":
                             case "Latest":
                             case "LatestEpisods":
-                            case "CategoryGroup":
-                                section = <MoviesList key={`page-section-${item.pageItemId}`} data={item} />
-                            break;
                             case "ExclusiveDubs":
                                 section = <MoviesList key={`page-section-${item.pageItemId}`} data={item} />
                             break;
