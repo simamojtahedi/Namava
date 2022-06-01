@@ -42,8 +42,14 @@ const Home = () => {
                                 section = <Slider key={`page-section-${item.pageItemId}`} sliderId={item.payloadKey} />
                                 break;
                             case "PostGroup":
+                            case "Latest":
+                            case "LatestEpisods":
+                            case "CategoryGroup":
                                 section = <MoviesList key={`page-section-${item.pageItemId}`} data={item} />
-                                break;
+                            break;
+                            case "ExclusiveDubs":
+                                section = <MoviesList key={`page-section-${item.pageItemId}`} data={item} />
+                            break;
                         }
                         return section
                     })
