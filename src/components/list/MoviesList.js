@@ -70,6 +70,8 @@ const MoviesList = (props) => {
         }
     }, [props.data])
 
+    console.log(previewState.id)
+
     return (
         <div className='p-0'>
             <div className='col-12 px-5 pt-2'>
@@ -86,7 +88,12 @@ const MoviesList = (props) => {
                 >
                     {items.length > 0 && 
                         items.map(item => (
-                            <SwiperSlide onClick={() => togglePreview(item.id || item.seriesId)} key={item.id || item.episodId} onMouseEnter={() => getItemDataHandler(item.id || item.episodeId)}>
+                            <SwiperSlide 
+                                onClick={() => togglePreview(item.id || item.seriesId)} 
+                                key={item.id || item.episodId} 
+                                onMouseEnter={() => getItemDataHandler(item.id || item.episodeId)}
+                                className={(item.episodId || item.id) === previewState.id && previewState.active && 'activeMovie'}
+                            >
                                 <Link to='/'>
                                     <LazyLoad className="image-placeholder" >
                                         <img src={imageUrl(item.imageUrl || item.seriesImageUrl)} />
