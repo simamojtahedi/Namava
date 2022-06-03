@@ -30,6 +30,24 @@ const MovieDetails = ({isActive, id}) => {
         }
     }, [id])
 
+    function mediaDetails (caption, items, maxLength, keyType ) {
+        let content = []
+        if(items == '' || items.length === 0) {
+            return
+        }
+        for (let i= 0; i < maxLength && i < items.length; i++) {
+            content.push(<Link to='/' key={keyType}>{items[i][keyType + 'Name']}</Link>)
+            content.push(<span to='/' key={keyType} className='seprator'> - </span>)
+        }
+        content.pop()
+        return (
+            <div className='slider-cast'>
+                <span>{caption}: </span>
+                {content}
+            </div>
+        )
+    }
+
     return (
         <div className={`preview-container ${isActive ? 'active-preview' : ''}` }>
             {data.loading ?
@@ -60,26 +78,10 @@ const MovieDetails = ({isActive, id}) => {
                         }
                         <Link to='/'><AiOutlineInfoCircle /> توضیحات بیشتر </Link>
                     </div>
-                    {data.data?.casts && <div className='slider-cast'>
-                        <span>ستارگان: </span>
-                        {data.data.casts.map(cast => (
-                            <Link to='/' key={cast.castId}> {cast.castName} </Link>
-                        ))}
-                    </div>}
-                    {data.data?.director?.length > 0 && 
-                    <div className='slider-cast'>
-                        <span>کارگردان: </span>
-                        {data.data.director.map(director => (
-                            <Link to='/' key={director.castId}>{director.castName}</Link>
-                        ))}
-                    </div>}
-                    {data.data?.categories?.length > 0 && 
-                    <div className='slider-cast'>
-                        <span>دسته بندی‌ها: </span>
-                        {data.data.categories.map(cat => (
-                            <Link to='/' key={cat.categoryId}> {cat.categoryName} </Link>
-                        ))}
-                    </div>}
+                    {data.data?.casts && mediaDetails('ستارگان', data.data.casts, 3, 'cast')}
+                    {data.data?.directors &&  mediaDetails('کارگردان', data.data.director, 3, 'cast')}
+                    {data.data?.categories && mediaDetails('دسته بندی‌ها', data.data.categories, 3, 'category')}
+
                 </div>
             </>
             }
