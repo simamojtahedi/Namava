@@ -70,8 +70,6 @@ const MoviesList = (props) => {
         }
     }, [props.data])
 
-    console.log(previewState.id)
-
     return (
         <div className='p-0'>
             <div className='col-12 px-5 pt-2'>
