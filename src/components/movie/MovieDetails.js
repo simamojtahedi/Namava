@@ -6,7 +6,7 @@ import { BsFillMicFill, BsPlayFill } from 'react-icons/bs'
 import { SiImdb } from 'react-icons/si'
 import { TbNotes } from 'react-icons/tb'
 import { Link } from 'react-router-dom'
-import { imageUrl } from '../../utils/functions'
+import { getItemUrl, imageUrl } from '../../utils/functions'
 
 const MovieDetails = ({isActive, id}) => {
     const [data, setData] = useState({
@@ -76,7 +76,7 @@ const MovieDetails = ({isActive, id}) => {
                             :
                             <Button variant="light"><BsPlayFill /> خرید اشتراک </Button>
                         }
-                        <Link to='/'><AiOutlineInfoCircle /> توضیحات بیشتر </Link>
+                        {data.data.type && <Link to={`/${data.data.type?.toLowerCase()}/${data.data.id}-${getItemUrl(data.data.caption)}`}><AiOutlineInfoCircle /> توضیحات بیشتر </Link>}
                     </div>
                     {data.data?.casts && mediaDetails('ستارگان', data.data.casts, 3, 'cast')}
                     {data.data?.directors &&  mediaDetails('کارگردان', data.data.director, 3, 'cast')}
