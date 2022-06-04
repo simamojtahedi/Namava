@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect } from 'react'
 import { useSlider, useSliderActions } from '../../context/SliderProvider';
 import { Button, Carousel } from 'react-bootstrap';
-import { imageUrl } from '../../utils/functions';
+import { getItemUrl, imageUrl } from '../../utils/functions';
 import {AiOutlineInfoCircle} from 'react-icons/ai'
 import {BsPlayFill} from 'react-icons/bs'
 import { Link } from 'react-router-dom';
@@ -39,7 +39,7 @@ const Slider = ({sliderId}) => {
                     <span className='mt-3'>{item.teaserText}</span>
                     <div className='actions mt-3 mb-4'>
                         <Button variant="light"><BsPlayFill />{item.isMarketable ? 'خرید بلیط' : ' خرید اشتراک'} </Button>
-                        <Link to='/'><AiOutlineInfoCircle /> توضیحات بیشتر </Link>
+                        <Link to={`/${item.type.toLowerCase()}/${item.id}-${getItemUrl(item.caption)}`}><AiOutlineInfoCircle /> توضیحات بیشتر </Link>
                     </div>
 
                     <div className='slider-cast'>
