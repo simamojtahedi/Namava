@@ -1,0 +1,274 @@
+
+.single-page-header {
+    height: 100vh;
+    overflow: auto;
+
+    .header-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(0,0,0,1) 0%,rgba(0,0,0,.9) 90%, rgba(0,0,0,0) 100%);
+            box-shadow: rgb(18, 18, 18) 0px -5px 5px inset;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .single-page-header-info {
+        direction: rtl;
+        position: relative;
+        z-index: 10;
+        padding: 3rem;
+
+        .logo {
+            max-width: 22vw;
+            height: 9vw;
+            object-fit: contain;
+            margin-top: 2rem;
+        }
+
+        .single-page-data {
+            h1 {
+                font-size: 1.1rem;
+            }
+
+            h6 {
+                font-size: .8rem;
+            }
+
+            .single-page-info {
+                display: flex;
+                align-items: center;
+
+                h6 {
+                    margin: 0 .8rem;
+                    &:first-of-type {
+                        margin-right: 0;
+                    }
+
+                    svg {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+
+            p {
+                width: 37vw;
+                font-size: .85rem;
+                line-height: 2;
+            }
+        }
+        .single-page-actions {
+            button {
+                font-size: .8rem !important;
+                padding: .7rem 1.2rem;
+                margin: 0 .3rem;
+                border: none;
+
+                &:first-of-type {
+                    margin-right: 0;
+                }
+
+                &:not(:first-of-type) {
+                    background-color: #717476 !important;
+                }
+            }
+
+            .rounded {
+                width: 42px;
+                height: 42px;
+                padding: 0;
+                border-radius: 50% !important;
+                margin: 0 .6rem;
+            }
+
+            svg {
+                font-size: 1.1rem;
+            }
+        }
+
+        .single-page-cast {
+            a, span {
+                color: #888;
+                margin: 0 0 0 1rem;
+                font-size: .83rem;
+                text-decoration: none;
+            }
+        }
+        .age {
+            span {
+                color: #888;
+                &:first-of-type {
+                    padding: .1rem .3rem;
+                    border-radius: 3px;
+                    margin-left: 1rem;
+                    color: #fff;
+                }
+            }
+        }
+
+        .seasons {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            button {
+                padding: .5rem 1.5rem;
+                margin-left: 2rem;
+            }
+
+            .seasons-data {
+                height: 42px;
+                border-radius: 5px;
+                background-color: #222327;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: .5rem 1rem;
+
+                span {
+                    margin: 0 .4rem;
+                    color: #eee;
+                }
+            }
+        }
+
+    }
+}
+
+.single-page-trailers {
+    position: relative;
+    z-index: 100;
+    direction: rtl;
+    padding: 1rem 2rem;
+
+    img {
+        width: 200px;
+        margin: 0 0 0 1rem;
+        border-radius: 5px;
+    }
+}
+
+.single-page-maininfo {
+    position: relative;
+    z-index: 100;
+    direction: rtl;
+    padding: 1rem 2rem;
+
+    h6 {
+        font-size: 1.1rem;
+
+        &:first-of-type {
+            font-size: .9rem;
+        }
+    }
+    p {
+        color: #8a8a8a;
+        font-weight: 100; 
+
+        a {
+            text-decoration: none;
+            color: #8a8a8a;
+        }
+    }
+
+    .single-page-list {
+        a, span {
+            text-decoration: none;
+            margin: 0 0 0 .5rem;
+            color: #c7c7c7;
+        }
+    }
+
+    .single-page-casts {
+
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center !important;
+            justify-content: center !important;
+            text-align: center !important;
+
+            h6 {
+                text-align: center;
+                margin-bottom: 0;
+                font-size: 1rem;
+                line-height: 1.3;
+
+                &:last-of-type {
+                    color: #717476;
+                    font-size: .9rem;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.single-page-comments {
+    position: relative;
+    z-index: 100;
+    direction: rtl;
+    padding: 1rem 2rem;
+
+    .comments {
+        background-color: #222327;
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 5px;
+
+        .comment {
+            display: flex;
+            align-items: flex-start;
+            margin: .8rem 0;
+            padding: 1rem;
+            border-bottom: 1px solid #7c7e7e31;
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+
+            .likes {
+                margin-top: 1.5rem;
+                span {
+                    margin-left: 1rem;
+                    font-size: 1rem;
+
+                    svg {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-left: .8rem;
+            }
+
+            h6 {
+                color: #A1AAAA;
+                font-size: .75rem;
+            }
+
+            p {
+                font-size: .8rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
