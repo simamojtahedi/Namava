@@ -7,7 +7,6 @@ import SinglePageInfo from '../components/singlePage/SinglePageInfo'
 import SinglePageTrailer from '../components/singlePage/SinglePageTrailer'
 
 const SinglePage = () => {
-    const [comments, setComments] = useState([])
     const [data, setData] = useState({
         loading: false,
         data: {},
@@ -24,21 +23,6 @@ const SinglePage = () => {
         .catch(err => setData({...data, loading: false, error: err}))
     }, [id])
     
-    useEffect(() => {
-        setData({...data, loading: true})
-        getComments(1)
-    }, [id])
-
-    const getComments = (pi) => {
-        axios.get(`https://www.namava.ir/api/v1.0/comments?pi=${pi}&ps=10&mediaId=${id.split('-')[0]}&profileId=0`)
-        .then ( response => {
-            setComments(response.data.result)
-        })
-        .catch(err => console.log(err))
-    }
-
-    console.log(comments)
-
     return (
         <div>
             {data?.loading ?
@@ -50,7 +34,7 @@ const SinglePage = () => {
                             <SinglePageHeader data={data.data.result} />
                             <SinglePageTrailer data={data.data.result} />  
                             <SinglePageInfo data={data.data.result} />
-                            {comments && <SinglePageComments comments={comments} getComments={getComments} />}
+                            <SinglePageComments id={id.split('-')[0]}  />
                         </>  
                     }
                 </>
