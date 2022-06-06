@@ -13,8 +13,8 @@ import SingglePageSeasons from './SingglePageSeasons'
 
 const SinglePageHeader = ({data}) => {
     const [selectedOption, setSelectedOption] = useState({
-        value: data?.seasons[0].seasonId,
-        label: `فصل ${data?.seasons[0].seasonOrderId}`
+        value: data?.seasons ? data?.seasons[0].seasonId : 0,
+        label: data?.seasons ? `فصل ${data?.seasons[0].seasonOrderId}` : ''
     });
     function mediaDetails (caption, items, maxLength, keyType ) {
         let content = []
@@ -34,7 +34,7 @@ const SinglePageHeader = ({data}) => {
         )
     }
 
-    const options = data?.seasons.map(item => (
+    const options = data?.seasons?.map(item => (
         {
             value: item.seasonId,
             label: `فصل ${item.seasonOrderId}`
@@ -50,8 +50,6 @@ const SinglePageHeader = ({data}) => {
           };
         },
     };
-
-    console.log(data?.seasons[0])
 
     return (
         <>
@@ -106,7 +104,7 @@ const SinglePageHeader = ({data}) => {
                     </div>
                 </div>
             </div>
-            {selectedOption.value && <SingglePageSeasons seasonId={selectedOption.value} />}
+            {selectedOption.value ? <SingglePageSeasons seasonId={selectedOption.value} /> : ''}
         </>
     )
 }
