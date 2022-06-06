@@ -1,13 +1,11 @@
 
 .single-page-header {
     height: 100vh;
-    overflow: auto;
     position: relative;
-    overflow: hidden;
 
     .header-bg {
         width: 100%;
-        height: 100vh;
+        height: 100%;
         position: absolute;
         left: 0;
         top: 0;
@@ -128,9 +126,9 @@
             align-items: center;
             flex-wrap: wrap;
 
-            button {
-                padding: .5rem 1.5rem;
+            .css-b62m3t-container {
                 margin-left: 2rem;
+                z-index: 100;
             }
 
             .seasons-data {
@@ -148,8 +146,83 @@
                 }
             }
         }
-
     }
+}
+
+
+.episode-container {
+    padding: 1rem;
+    direction: rtl;
+    margin: 1rem 0;
+
+    .ep-image {
+        width: 100%;
+        position: relative;
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        span {
+            position: absolute;
+            right: 8px;
+            bottom: 8px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: .2rem .6rem;
+            border-radius: 3px;
+            font-size: .76rem;
+            color: #c7c7c7;
+        }
+
+        .ep-new {
+            right: auto;
+            left: 8px;
+            bottom: 8px;
+            background-color: #99C14D;
+            padding: .2rem .6rem;
+            border-radius: 3px;
+            font-size: .76rem;
+            color: #000;  
+        }
+    }
+
+    h6 {
+        font-size: .9rem;
+        margin: 1rem 0 !important;
+    }
+
+    .ep-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        span {
+            font-size: .8rem;
+        }
+        svg {
+            font-size: 1.3rem;
+        }
+        button {
+            font-size: .9rem;
+            background-color: rgba(99, 99, 99, 0.6);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            padding: 0;
+            border: none;
+            margin: 0 .2rem;
+
+            svg {
+                font-size: 1.1rem;
+            }
+        }
+    }
+    p {
+        color: #AAAAAA;
+        font-size: .85rem;
+    }
+
 }
 
 .single-page-trailers {
