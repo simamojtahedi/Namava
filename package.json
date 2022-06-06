@@ -19,6 +19,7 @@
     "react-lazyload": "^3.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-select": "^5.3.2",
     "styled-components": "^5.3.5",
     "swiper": "^8.2.1",
     "web-vitals": "^2.1.4"
