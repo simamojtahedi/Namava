@@ -11,7 +11,6 @@ import LazyLoad from 'react-lazyload';
 import "swiper/css/pagination";
 import "swiper/css";
 import './MoviesList.scss'
-import { useBriefData, useBriefDataActions } from "../../context/BriefDataProvider";
 import Preview from "../movie/Preview";
 
 const MoviesList = (props) => {
@@ -75,7 +74,13 @@ const MoviesList = (props) => {
             <div className='col-12 px-5 pt-2'>
                 <div className='col-12 moviesListTitle'>
                     <h6>{props.data && props.data.caption}</h6>
-                    <Link to='/'> مشاهده همه <BiChevronLeft /></Link>
+                    {props.data &&
+                        <Link to='/list' state={{
+                                items,
+                                title: props.data?.caption,
+                                showList: true
+                        }}> مشاهده همه <BiChevronLeft /></Link>
+                    }
                 </div>
                 <Swiper
                     slidesPerView={7.2}
