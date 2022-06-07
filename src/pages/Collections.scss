@@ -1,0 +1,48 @@
+
+.collection-container {
+    direction: rtl;
+    overflow: auto;
+
+    .collection-header {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        padding: 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            box-shadow: rgb(18, 18, 18) 0px -5px 5px inset;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        h1 {
+            position: absolute;
+            z-index: 100;
+            bottom: 13rem;
+            right: 40px;
+            font-size: 2rem;
+        }
+
+        p {
+            position: absolute;
+            z-index: 100;
+            bottom: 2rem;
+            right: 20px;
+            font-size: 1rem;
+            width: 80%;
+        }
+    }
+}
