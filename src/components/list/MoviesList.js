@@ -8,8 +8,6 @@ import {SiImdb} from 'react-icons/si'
 import {BsFillMicFill} from 'react-icons/bs'
 import { imageUrl } from "../../utils/functions";
 import LazyLoad from 'react-lazyload';
-import "swiper/css/pagination";
-import "swiper/css";
 import './MoviesList.scss'
 import Preview from "../movie/Preview";
 
