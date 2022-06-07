@@ -35,7 +35,7 @@ const CastList = (props) => {
                 {items.length > 0 && 
                     items.map(item => (
                         <SwiperSlide key={item.castId} >
-                            <Link to='/'>
+                            <Link to={`/person-${item.castId}-${item.castName}`}>
                                 <LazyLoad className="cast-placeholder" >
                                     <img src={imageUrl(item.castImageUrl)} />
                                 </LazyLoad>

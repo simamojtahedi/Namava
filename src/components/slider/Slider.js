@@ -45,7 +45,7 @@ const Slider = ({sliderId}) => {
                     <div className='slider-cast'>
                         <span>ستارگان: </span>
                         {item.casts.map(cast => (
-                            <Link to='/' key={cast.castId}> {cast.castName} </Link>
+                            <span key={cast.castId}> {cast.castName} </span>
                         ))}
                     </div>
                     {item.director.length > 0 && 

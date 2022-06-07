@@ -5,8 +5,7 @@ import { AiFillHeart } from 'react-icons/ai';
 import { BsFillMicFill } from 'react-icons/bs';
 import { SiImdb } from 'react-icons/si';
 import LazyLoad from 'react-lazyload';
-import { Link, useLocation } from 'react-router-dom'
-import Preview from '../components/movie/Preview';
+import { useLocation } from 'react-router-dom'
 import { imageUrl } from '../utils/functions';
 import './List.scss'
 
@@ -69,8 +68,6 @@ const List = () => {
                     ))
                 }       
             </Row>
-            {<Preview id={previewState.id} isActive={previewState.active} />}
-
         </Container>
     )
 }

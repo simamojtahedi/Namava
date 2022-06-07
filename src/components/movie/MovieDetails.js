@@ -36,7 +36,7 @@ const MovieDetails = ({isActive, id}) => {
             return
         }
         for (let i= 0; i < maxLength && i < items.length; i++) {
-            content.push(<Link to='/' key={keyType}>{items[i][keyType + 'Name']}</Link>)
+            content.push(<span to='/' key={keyType}>{items[i][keyType + 'Name']}</span>)
             content.push(<span to='/' key={keyType} className='seprator'> - </span>)
         }
         content.pop()

@@ -19,6 +19,8 @@ const BannerList = (props) => {
         })
     }, [props.data])
 
+    console.log(items)
+
     return (
         <div className='col-12 px-5 pt-2'>
             <Swiper
@@ -31,7 +33,7 @@ const BannerList = (props) => {
                 {items.length > 0 && 
                     items.map(item => (
                         <SwiperSlide key={item.id || item.episodId} >
-                            <Link to='/'>
+                            <Link to={`/collection-${item.referenceId}-${item.caption || item.seriesCaption}`}>
                                 <LazyLoad className="banner-placeholder" >
                                     <img src={imageUrl(item.imageUrl || item.seriesImageUrl)} />
                                 </LazyLoad>
