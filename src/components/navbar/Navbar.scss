@@ -34,21 +34,21 @@
     }
 
     .nav-actions {
-        button {
+        button, a {
             font-size: .78rem;
             padding: .5rem 1rem;
             margin: 0 .4rem;
+
+            svg {
+                width: 35px;
+                height: 35px;
+                color: #fff !important;
+            }
             &:not(:last-of-type) {
                 padding: .3rem;
                 background-color: transparent;
                 border: none;
                 overflow: hidden;
-    
-                svg {
-                    width: 35px;
-                    height: 35px;
-                    color: #fff !important;
-                }
             }
         }
     }

@@ -49,7 +49,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className='nav-actions'>
-                <Button><BiSearch /></Button>
+                <Link to='/search'><BiSearch /></Link>
                 <Button>
                     خرید اشتراک
                 </Button>
