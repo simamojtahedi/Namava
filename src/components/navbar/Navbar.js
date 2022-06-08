@@ -40,12 +40,10 @@ const Navbar = () => {
                 </Link>
                 <div>
                     <Link to='/'>خانه</Link>
-                    <Link to='/'>فیلم ها</Link>
-                    <Link to='/'>سریال ها</Link>
-                    <Link to='/'>دسته بندی</Link>
-                    <Link to='/'>تازه ها</Link>
-                    <Link to='/'>کودکان</Link>
-                    <Link to='/'>نماوا مگ</Link>
+                    <Link to='/movie'>فیلم ها</Link>
+                    <Link to='/series'>سریال ها</Link>
+                    <Link to='/category'>دسته بندی</Link>
+                    <Link to='/latest'>تازه ها</Link>
                 </div>
             </div>
             <div className='nav-actions'>
