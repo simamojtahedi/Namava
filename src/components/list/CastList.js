@@ -39,6 +39,10 @@ const CastList = (props) => {
                     768: {
                       slidesPerView: 4,
                       spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 7.2,
+                        spaceBetween: 15,
                     }
                   }}
             >

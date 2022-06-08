@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Col, Form, Nav, Row, Tab } from 'react-bootstrap'
 
 const FilterBox = ({filters}) => {
-
     return (
         <div className='ml-4 ms-2 filters-box-contianer'>
             <Tab.Container id="tab" defaultActiveKey="genre">
@@ -10,7 +9,7 @@ const FilterBox = ({filters}) => {
                     <Col sm={2}>
                     <Nav variant="pills" className="flex-column">
                         {filters.filters['filtersId'].map(filterId => (
-                            <Nav.Item key={filters.filters[filterId].slug}>
+                            <Nav.Item key={filters.filters[filterId]}>
                                 <Nav.Link eventKey={filters.filters[filterId].slug}>{filters.filters[filterId].caption}</Nav.Link>
                             </Nav.Item>
                         ))}

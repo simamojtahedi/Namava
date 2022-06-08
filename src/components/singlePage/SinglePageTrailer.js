@@ -9,7 +9,7 @@ const SinglePageTrailer = ({data}) => {
             <div>
                 {data?.slideImageList.length > 0 &&
                     data.slideImageList.map(item => (
-                        <img src={`${imageUrl(item.url)}?anchor=middlecenter&crop=auto&scale=both&w=200&h=150`} />
+                        <img key={item.title} src={`${imageUrl(item.url)}?anchor=middlecenter&crop=auto&scale=both&w=200&h=150`} />
                     ))
                 }
             </div>

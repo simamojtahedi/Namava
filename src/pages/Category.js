@@ -37,7 +37,7 @@ const Category = () => {
             <Row>
                 {menues.loading === false && menues.data.length > 0 && 
                     menues.data.filter(item => item.entityType = "CategoryGroup" && item.parentId === 5).map(item => (
-                        <div className='col-lg-3'>
+                        <div className='col-lg-3' key={item.menuId}>
                             <img src={imageUrl(item.imageUrl)} />
                             <h6>{item.caption}</h6>
                         </div>

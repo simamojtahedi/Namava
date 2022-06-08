@@ -21,7 +21,7 @@ const SingglePageSeasons = ({seasonId}) => {
             <Row className='px-3 mt-4 flex-row-reverse'>
                 {episods?.length > 0 ?
                     episods.map(episode => (
-                        <div className='episode-container col-lg-3'>
+                        <div className='episode-container col-lg-3' key={episode.id}>
                             <div className='ep-image'>
                                 <img src={`${imageUrl(episode.imageUrl)}?anchor=middlecenter&crop=auto&scale=both&w=300&h=195`} />
                                 <span>{episode.mediaDuration} دقیقه</span>

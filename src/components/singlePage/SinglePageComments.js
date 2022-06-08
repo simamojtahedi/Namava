@@ -47,7 +47,7 @@ const SinglePageComments = ({id}) => {
                 <div className='comments'>
                 {commentsData.comments?.length > 0 && 
                     commentsData.comments.map(comment => (
-                        <div className='comment'>
+                        <div className='comment' key={comment.id}>
                             <img src={imageUrl(comment?.profileAvatar)} />
                             <div>
                                 <h6>{comment?.profileCaption} - {time(comment?.createDateUTC)}</h6>
