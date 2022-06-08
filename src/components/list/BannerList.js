@@ -27,6 +27,16 @@ const BannerList = (props) => {
                 pagination={{clickable: true }}
                 dir="rtl"
                 className="bannersList"
+                breakpoints={{
+                    640: {
+                      slidesPerView: 2,
+                      spaceBetween: 20,
+                    },
+                    768: {
+                      slidesPerView: 2,
+                      spaceBetween: 40,
+                    }
+                  }}
             >
                 {items.length > 0 && 
                     items.map(item => (

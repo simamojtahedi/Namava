@@ -31,6 +31,16 @@ const CastList = (props) => {
                 pagination={{clickable: true }}
                 dir="rtl"
                 className="castsList"
+                breakpoints={{
+                    640: {
+                      slidesPerView: 3,
+                      spaceBetween: 20,
+                    },
+                    768: {
+                      slidesPerView: 4,
+                      spaceBetween: 40,
+                    }
+                  }}
             >
                 {items.length > 0 && 
                     items.map(item => (
