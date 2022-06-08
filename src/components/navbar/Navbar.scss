@@ -66,3 +66,9 @@
     position: fixed;
     top: -80px;
 }
+
+@media (max-width: 990px) {
+    .nav {
+        display: none;
+    }
+}
