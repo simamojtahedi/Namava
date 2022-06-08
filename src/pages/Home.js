@@ -59,7 +59,6 @@ const Home = () => {
                         return section
                     })
                 }
-                <Slider sliderId={1316} />
                 <MoviesList />
             </Row>
         </Container>
