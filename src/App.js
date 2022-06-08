@@ -10,6 +10,10 @@ import Collections from './pages/Collections';
 import "swiper/css/pagination";
 import "swiper/css";
 import ActorPage from './pages/ActorPage';
+import Movie from './pages/Movie';
+import Series from './pages/Series';
+import Category from './pages/Category';
+import Latest from './pages/Latest';
 
 function App() {
   return (
@@ -20,9 +24,14 @@ function App() {
             <Route path={'/:type/:id'} element={<SinglePage />} />
             <Route path="/list" element={ <List />} />
             <Route path="/search" element={<Search />} />
-            <Route path="/search" element={<Search />} />
             <Route path="/collection-:id" element={<Collections />} />
             <Route path="/person-:id" element={<ActorPage />} />
+
+            <Route path="/movie" element={<Movie />} />
+            <Route path="/series" element={<Series />} />
+            <Route path="/category" element={<Category />} />
+            <Route path="/latest" element={<Latest />} />
+
             <Route path="/" exact element={ <Home />} />
         </Routes>
       </Router>
