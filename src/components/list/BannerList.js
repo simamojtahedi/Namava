@@ -19,8 +19,6 @@ const BannerList = (props) => {
         })
     }, [props.data])
 
-    console.log(items)
-
     return (
         <div className='col-12 px-5 pt-2'>
             <Swiper

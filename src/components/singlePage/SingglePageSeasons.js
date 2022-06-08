@@ -6,8 +6,6 @@ import {AiFillHeart} from 'react-icons/ai'
 import {BsDownload, BsHandThumbsUp, BsHandThumbsDown} from 'react-icons/bs'
 
 const SingglePageSeasons = ({seasonId}) => {
-
-    console.log(seasonId)
     const [episods, setEpisods] = useState([])
 
     useEffect(() => {
@@ -17,8 +15,6 @@ const SingglePageSeasons = ({seasonId}) => {
         })
         .catch(err => console.log(err))
     }, [seasonId])
-
-    console.log(episods)
 
     return (
         <Container fluid>

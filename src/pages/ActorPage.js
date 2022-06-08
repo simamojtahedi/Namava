@@ -36,7 +36,6 @@ const ActorPage = () => {
     useEffect(() => {
         axios.get(`https://www.namava.ir/api/v1.0/casts/${id.split('-')[0]}`)
         .then(response => {
-            console.log(response.data.result)
             setItems(response.data.result)
         })
     }, [id])
@@ -49,7 +48,6 @@ const ActorPage = () => {
         .catch(err => console.log(err))
     }
 
-    console.log(items)
     return (
         <Container fluid className='p-0'>
             <div className='actor-container'>

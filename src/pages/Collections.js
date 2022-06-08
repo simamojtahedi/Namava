@@ -38,13 +38,11 @@ const Collections = () => {
     useEffect(() => {
         axios.get(`https://www.namava.ir/api/v1.0/post-groups/${id.split('-')[0]}`)
         .then(response => {
-            console.log(response.data.result)
             setData(response.data.result)
         })
 
         axios.get(`https://www.namava.ir/api/v1.0/post-groups/${id.split('-')[0]}/medias?pi=1&ps=20`)
         .then(response => {
-            console.log(response.data.result)
             setItems(response.data.result)
         })
     }, [id])

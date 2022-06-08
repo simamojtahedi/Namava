@@ -31,8 +31,6 @@ const Category = () => {
         fetchMenues(dispatch)
     }, [dispatch])
 
-    console.log(menues.data.filter(item => item.entityType = "CategoryGroup" && item.parentId === 5))
-
     return (
         <div className='page-container'>
            <Container fluid>
